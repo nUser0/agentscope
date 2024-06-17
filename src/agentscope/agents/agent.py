@@ -55,7 +55,8 @@ class _AgentMeta(ABCMeta):
                         "localhost",
                     ),
                     port=to_dist.pop("port", None),  # type: ignore[arg-type]
-                    max_pool_size=kwargs.pop(  # type: ignore[arg-type]
+                    # max_pool_size=kwargs.pop(  # type: ignore[arg-type]
+                    max_pool_size=to_dist.pop(  # type: ignore[arg-type]
                         "max_pool_size",
                         8192,
                     ),
